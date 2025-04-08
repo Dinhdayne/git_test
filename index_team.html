@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card | 30 Days Thực chiến HTML CSS JS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .meta-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #7f8c8d;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .meta-info span {
+            white-space: nowrap;
+        }
+
+        .profiles-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 30px;
+        }
+
+        .profile-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #3498db;
+            margin-bottom: 15px;
+        }
+
+        .profile-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .profile-title {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .contact-btn {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: auto;
+            width: 100%;
+            max-width: 200px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .contact-btn:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            margin-top: auto;
+            font-size: 14px;
+            color: #7f8c8d;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .scroll-hint {
+            margin-top: 10px;
+            font-style: italic;
+            color: #95a5a6;
+        }
+
+        @media (max-width: 768px) {
+            .profiles-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .profile-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Day 2: Profile Card xếp ngang | 30 Days Thực chiến HTML CSS JS</h1>
+        <div class="meta-info">
+            <span>History - Data up Catalog file</span>
+            <span>Profile Card</span>
+            <span>nodemy.wnj/register.html-css-js.jon/f8p-cswf</span>
+        </div>
+    </div>
+    
+    <div class="profiles-container">
+        <div class="profile-card">
+            <img src="https://i.pravatar.cc/150?img=1" alt="Dinh Nam" class="avatar">
+            <div class="profile-name">Dinh Nam</div>
+            <div class="profile-title">Fullstocks Developer</div>
+            <a href="index.html" class="contact-btn">Contact me</a>
+        </div>
+        
+        <div class="profile-card">
+            <img src="https://i.pravatar.cc/150?img=2" alt="Minh Thai" class="avatar">
+            <div class="profile-name">Minh Thai</div>
+            <div class="profile-title">Fullstocks Developer</div>
+            <a href="index.html" class="contact-btn">Contact me</a>
+        </div>
+        
+        <div class="profile-card">
+            <img src="https://i.pravatar.cc/150?img=3" alt="Cuong Nv" class="avatar">
+            <div class="profile-name">Cuong Nv</div>
+            <div class="profile-title">Fullstocks Developer</div>
+            <a href="index.html" class="contact-btn">Contact me</a>
+        </div>
+
+        <div class="profile-card">
+            <img src="https://i.pravatar.cc/150?img=4" alt="Cuong Nv" class="avatar">
+            <div class="profile-name">Cuong Nv</div>
+            <div class="profile-title">Fullstocks Developer</div>
+            <a href="index.html" class="contact-btn">Contact me</a>
+        </div>
+
+        <div class="profile-card">
+            <img src="https://i.pravatar.cc/150?img=5" alt="Cuong Nv" class="avatar">
+            <div class="profile-name">Cuong Nv</div>
+            <div class="profile-title">Fullstocks Developer</div>
+            <a href="index.html" class="contact-btn">Contact me</a>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div>22:28 / 27:59</div>
+        <div class="scroll-hint">Cuộn để biết thêm chi tiết</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileCards = document.querySelectorAll('.profile-card');
+            
+            // Hiệu ứng xuất hiện cho các card
+            profileCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 300);
+            });
+        });
+    </script>
+</body>
+</html>
