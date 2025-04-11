@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Student</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+    
+    /* Sidebar */
+    .sidebar {
+      background: #0f172a;
+      color: #fff;
+      width: 300px;
+      padding: 30px 20px;
+      text-align: center;
+      position: fixed;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #38bdf8;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+    
+    .avatar:hover {
+      transform: scale(1.05);
+    }
+    
+    .student-name {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 600;
+      color: #fff;
+    }
+    
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    
+    .icon-img {
+      width: 30px;
+      height: 30px;
+      transition: all 0.3s ease;
+      border-radius: 50%;
+      padding: 5px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .icon-img:hover {
+      transform: scale(1.2);
+      background: #38bdf8;
+    }
+    
+    .menu {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    
+    .menu a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    
+    .menu a:hover {
+      background: rgba(56, 189, 248, 0.1);
+      color: #38bdf8;
+      transform: translateX(5px);
+    }
+    
+    .menu a i {
+      width: 20px;
+      text-align: center;
+    }
+    
+    .copyright {
+      margin-top: auto;
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    
+    /* Main Content */
+    .content {
+      margin-left: 300px;
+      padding: 40px;
+      flex: 1;
+      background: #fff;
+      border-radius: 10px 0 0 0;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .about h1 {
+      font-size: 32px;
+      color: #0f172a;
+      margin-bottom: 30px;
+      position: relative;
+      padding-left: 15px;
+    }
+    
+    .about h1::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 4px;
+      background: #3b82f6;
+      border-radius: 2px;
+    }
+    
+    .about-content {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .about-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #3b82f6;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .info {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .info h2 {
+      font-size: 24px;
+      color: #1e3a8a;
+      margin-bottom: 15px;
+    }
+    
+    .info p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+    
+    .info-grid div {
+      background: #f8fafc;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 14px;
+      border-left: 3px solid #3b82f6;
+    }
+    
+    .info-grid strong {
+      color: #1e3a8a;
+      display: inline-block;
+      min-width: 80px;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+      }
+      
+      .content {
+        margin-left: 0;
+        border-radius: 0;
+      }
+      
+      .about-content {
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .info {
+        text-align: left;
+      }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img src="https://i.pravatar.cc/150?img=1" alt="Avatar" class="avatar">
+      <h2 class="student-name">Bùi Phúc Định</h2>
+      <div class="social-icons">
+        <a href="https://x.com/dinhhodan"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" alt="Twitter_X" class="icon-img"></a>
+        <a href="https://www.facebook.com/bui.hust.5?locale=vi_VN"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="icon-img"></a>
+        <a href="https://www.instagram.com/pd.0105/"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="icon-img"></a>
+        <a href="https://www.tiktok.com/@dinhhuhu?lang=vi-VN"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046127.png" alt="Tiktok" class="icon-img"></a>
+        <a href="https://www.linkedin.com/in/%C4%91%E1%BB%8Bnh-b%C3%B9i-ph%C3%BAc-013056348/"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn" class="icon-img"></a>
+      </div>
+      <nav class="menu">
+        <a href="#"><i class="fas fa-home"></i> Home</a>
+        <a href="#"><i class="fas fa-user"></i> About</a>
+        <a href="#"><i class="fas fa-file"></i> Resume</a>
+        <a href="#"><i class="fas fa-briefcase"></i> Portfolio</a>
+        <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+      </nav>
+      <p class="copyright">© Copyright by <strong>Nguyễn Văn A</strong></p>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <section class="about">
+        <h1>About Me</h1>
+        <div class="about-content">
+          <img src="https://i.pravatar.cc/150?img=1" alt="About Image" class="about-img">
+          <div class="info">
+            <h2>Designer & Web Developer</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="info-grid">
+              <div><strong>Birthday:</strong> 1 Jan 2000</div>
+              <div><strong>Age:</strong> 24</div>
+              <div><strong>Website:</strong> www.example.com</div>
+              <div><strong>Degree:</strong> Bachelor</div>
+              <div><strong>Phone:</strong> 0966 883 889</div>
+              <div><strong>Email:</strong> example@email.com</div>
+              <div><strong>City:</strong> Hà Nội</div>
+              <div><strong>Freelance:</strong> Available</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
